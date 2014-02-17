@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Viewer</title>
+
+    <style>
+        json-tree {
+            font-size: 13px;
+            font-family: monospace;
+        }
+        json-tree input[type="text"]{
+            width: 4em;
+            height: 11px;
+        }
+        json-tree ul {
+            list-style: none;
+            margin: 0 0 0 -24px;
+        }
+
+        json-tree .key {
+            color: darkred;
+        }
+
+        table tr td {
+            display: inline-block;
+            vertical-align: top;
+            width: 20em;
+        }
+    </style>
+</head>
+<body>
+<h1>Editable JSON-tree AngularJS directive</h1>
+
+<div ng-app="myApp">
+    <div ng-controller="myCtrl">
+
+        <div style="border-top: 0.2em solid darkslategray; margin-top: 1em; padding: 0 0 0.5em;"></div>
+
+        <table>
+            <tr>
+                <td><json-tree json="jsonData"></json-tree></td>
+                <td><pre><code>{{stringify(jsonData)}}</code></pre></td>
+                <td>
+                    <textarea ng-model="inputdata" placeholder="Input Your JSON..." style="width: 20em; height: 10em;"></textarea>
+                    <br/>
+                    <button ng-click="set(inputdata)">Set</button>
+                    <button ng-click="default()">Default</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+<script src="json-tree.js"></script>
+<script>
+    (function(){
+        var myApp = angular.module('myApp', ['json-tree']);
+
+        myApp.controller('myCtrl', function($scope){
+            // sample json data
+            function defaultData() {
+                return {
+                    key1: 'str',
+                    key2: 12.34,
+                    key3: null,
+                    array: [3, 1, 2],
+                    object: {
+                        anotheObject: {
+                            key1: 1,
+                            bool: true
+                        }
+                    },
+                    arrayOfObjects: [{
+                        dataFromFunction: new funcData(),
+                        key1: 'Hello World!'
+                    },{
+                        bool: true,
+                        someFunction: function(){
+                            /* not editable */
+                            return 'some function'
+                        }
+                    }],
+                    key4: undefined
+                };
+            }
+
+            function funcData(){
+                return {
+                    fullname: {
+                        first: 'json',
+                        last: 'tree'
+                    },
+                    version : "1.0.0"
+                }
+            };
+
+            $scope.jsonData = defaultData();
+
+            $scope.stringify = function(data){
+                return JSON.stringify(data, undefined, 2)
+            };
+
+            function parse(data){
+                return data ? JSON.parse(data) : {};
+            };
+
+            $scope.set = function(data){
+                $scope.jsonData = parse(data);
+            }
+            $scope.default = function(){
+                $scope.jsonData = defaultData();
+                $scope.inputdata = '';
+            }
+        })
+    })()
+</script>
+</body>
+</html>
