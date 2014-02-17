@@ -7,7 +7,7 @@ An AngularJS directive used for displaying and editing JSON data in a tree view.
 Add scripts to your main html:
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
-<script src="https://raw2.github.com/krispo/json-tree/master/json-tree.js"></script>
+<script src="https://rawgithub.com/krispo/json-tree/master/json-tree.js"></script>
 ```
 
 Inject `json-tree` directive into angular module and push some data to the controller:
@@ -30,4 +30,4 @@ and in html again you can use it like:
 Add more style to prettify the view (see example.html).
 
 ---
-watch it [online](https://rawgithub.com/krispo/json-tree/master/example.html).
+watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html).
