@@ -27,7 +27,24 @@ and in html again you can use it like:
 </div>
 ```
 
-Add more style to prettify the view (see example.html).
+By default, it is used a **high** edit level that allows you to add new nodes,
+reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, null).
+
+If you want to operate only with key-values of the nodes and avoid transformation of json tree, you can add **low** `edit-level` attribute like:
+```html
+<json-tree json='jsonData' edit-level='low'></json-tree>
+```
+
+You can completely refresh directive by using directive internal refresh function. To access this function just add `node` attribute like:
+```html
+<json-tree json='jsonData' edit-level='low' node='nodeOptions'></json-tree>
+```
+and then use it in controller as:
+```javascript
+$scope.nodeOptions.refresh();
+```
+
+Add more style to prettify the view. See complete example in `example.html` file.
 
 ---
-watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html).
+Watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html).
