@@ -1,6 +1,13 @@
 # Editable JSON tree
 
 An AngularJS directive used for displaying and editing JSON data in a tree view.
+Available operations with nodes:
+
+* `add` new nodes,
+* `reset` node values to null,
+* `remove` node completely,
+* `change` value and type of the node (to object, array, string, number, boolean, null),
+* `drag` and `sort` tree nodes (via pressed `Ctrl`). (except array elements)
 
 ## How to use
 
@@ -28,7 +35,8 @@ and in html again you can use it like:
 ```
 
 By default, it is used a **high** edit level that allows you to add new nodes,
-reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, null).
+reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, null),
+drag and sort tree nodes.
 
 If you want to operate only with key-values of the nodes and avoid transformation of json tree, you can add **low** `edit-level` attribute like:
 ```html
@@ -43,6 +51,8 @@ and then use it in controller as:
 ```javascript
 $scope.nodeOptions.refresh();
 ```
+
+Drag and sort your tree nodes via pressed `Ctrl` key.
 
 Add more style to prettify the view. See complete example in `example.html` file.
 

@@ -3,6 +3,7 @@
 <head>
     <title>JSON Viewer</title>
     <style>
+        /* for json-tree ----------------------------------- */
         json-tree {
             font-size: 13px;
             font-family: monospace;
@@ -31,6 +32,19 @@
             color: #c0c0c0;
         }
 
+        json-tree .drag {
+            position: absolute;
+            background-color: #e2efff;
+            opacity:0.5;
+            cursor: pointer;
+        }
+
+        json-tree .empty {
+            border: 1px dashed darkred;
+            background-color: #e2efff;
+        }
+
+        /* for table -------------------------------------- */
         table tr td {
             display: inline-block;
             vertical-align: top;
@@ -41,11 +55,13 @@
 </head>
 <body>
 <h1>Editable JSON-tree AngularJS directive</h1>
+<div>Operations with nodes: <b>add, reset, remove, change value and type, drag and sort</b></div>
 <hr/>
-<a href="https://github.com/krispo/json-tree" target="_blank" style="float: right;">View on Github</a>
+<a href="https://github.com/krispo/json-tree" target="_blank" style="float: right; color: darkred">View on Github</a>
 <div ng-app="myApp">
     <div ng-controller="myCtrl">
         <h2>High edit level (default)</h2>
+        <h3>Drag and sort tree nodes via pressed <code style="color: darkred">'Ctrl'</code> key</h3>
         <textarea ng-model="inputdata" placeholder="Input Your JSON..." style="width: 20em; height: 5em;"></textarea>
         <button ng-click="set(inputdata)" style="vertical-align: top;">Set</button>
         <button ng-click="default()" style="vertical-align: top;">Default</button>
@@ -72,18 +88,20 @@
             &laquo;<span class="reset"> ~ </span>&raquo; --- reset node value to null.
             <br/>
             &laquo;<span class="remove"> - </span>&raquo; --- completely remove the node.
+            <br/>
+            &laquo;Ctrl&raquo; --- press Ctrl key to drag and sort tree nodes.
         </div>
     </div>
     <hr/>
     <div ng-controller="myCtrl">
-        <h2>Low edit level (add attribute: <code style="color: darkred">edit-level="low"</code>)</h2>
+        <h2>Low edit level (add attributes: <code style="color: darkred">edit-level="low"</code>, <code style="color: darkred">collapsed="false"</code>)</h2>
         <textarea ng-model="inputdata" placeholder="Input Your JSON..." style="width: 20em; height: 5em;"></textarea>
         <button ng-click="set(inputdata)" style="vertical-align: top;">Set</button>
         <button ng-click="default()" style="vertical-align: top;">Default</button>
         <br/><br/>
         <table>
             <tr>
-                <td><json-tree json="jsonData" edit-level="low" node="nodeOptions"></json-tree></td>
+                <td><json-tree json="jsonData" node="nodeOptions" edit-level="low" collapsed="false"></json-tree></td>
                 <td><pre><code>{{jsonData | json}}</code></pre></td>
             </tr>
         </table>
