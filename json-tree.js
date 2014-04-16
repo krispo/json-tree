@@ -132,19 +132,36 @@
                             }
                         },
 
-                        /* swap key1 and key2 - two sibling nodes in json. key1 has lower index than key2 */
-                        swapNodes: function(key1, key2){
-                            /* swap for object */
+                        /* move node from position with index 'i' to position with index 'j' */
+                        moveNode: function(i, j){
+                            /* moving for object */
                             if ($scope.node.type() === 'object'){
-                                var json = {};
+                                var json = {},
+                                    keys = Object.keys($scope.json),
+                                    key1 = keys[i],
+                                    key2 = keys[j];
+
                                 angular.forEach($scope.json, function(value, key){
-                                    if (key == key1) {
-                                        json[key2] = $scope.json[key2];
-                                        json[key1] = $scope.json[key1];
+                                    if (key == key2) {
+                                        if (j > i){
+                                            json[key2] = $scope.json[key2];
+                                            json[key1] = $scope.json[key1];
+                                        } else {
+                                            json[key1] = $scope.json[key1];
+                                            json[key2] = $scope.json[key2];
+                                        }
                                     }
-                                    else if (key != key2) json[key] = value;
+                                    else if (key != key1) json[key] = value;
                                 });
                                 $scope.json = json;
+                            }
+
+                            /* moving for array */
+                            else if ($scope.node.type() === 'array'){
+                                var temp = $scope.json[i];
+                                $scope.json.splice(i, 1);
+                                $scope.json.splice(j, 0, temp);
+                                $scope.refresh();
                             }
                         },
 
@@ -179,8 +196,8 @@
                         /* if childs[key] is dragging now, dragChildKey matches to key  */
                         dragChildKey: null,
 
-                        /* used to calculate coordinates (top, left, height, width, meanY) of draggable elements by key */
-                        dragRectangle: {},
+                        /* used to get info such as coordinates (top, left, height, width, meanY) of draggable elements by key */
+                        dragElements: {},
 
                         /* check current node is object or array */
                         isObject: function(){
@@ -256,25 +273,13 @@
         .directive('draggable', function($document) {
             return {
                 link: function(scope, element, attr) {
-                    var startX = 0, startY = 0, deltaX = 0, deltaY = 0, emptyElement;
+                    var startX, startY, deltaX, deltaY, emptyElement, keys, index;
 
                     /* Save information of the current draggable element to the parent json-tree scope.
                      * This would be done under initialization */
-                    scope.node.dragRectangle[scope.key] = function(){
-                        var el = element[0], // take current element
-                            left = 0,
-                            top = 0,
-                            height = typeof el.offsetHeight === 'undefined' ? 0 : el.offsetHeight,
-                            width = typeof el.offsetWidth === 'undefined' ? 0 : el.offsetWidth;
-
-                        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-                            left += el.offsetLeft;
-                            top += el.offsetTop;
-                            el = el.offsetParent;
-                        }
-
-                        return { top: top, left: left, height: height, width: width, meanY: top + height / 2 }
-                    };
+                    scope.node.dragElements[scope.key] = function(){
+                        return element;
+                    }
 
                     element.on('mousedown', function(event) {
                         /* Check if pressed Ctrl */
@@ -282,7 +287,7 @@
 
                             scope.node.dragChildKey = scope.key; // tell parent scope what child element is draggable now
 
-                            var rect = scope.node.dragRectangle[scope.key]();
+                            var rect = getRectangle(scope.node.dragElements[scope.key]()[0]);
 
                             /* If child element is not draggable, than make the current element draggable */
                             if (scope.childs[scope.key].dragChildKey == null) {
@@ -309,55 +314,89 @@
                                 });
                                 element.after(emptyElement);
 
+                                /* Auxiliary array of json keys to retain the order of the current key's positions */
+                                keys = Object.keys(scope.json);
+                                index = scope.$index;
+
                                 /* Subscribe on document mouse events */
-                                $document.on('mousemove', mousemove);
-                                $document.on('mouseup', mouseup);
+                                $document.on('mousemove', mousemoveEventHandler);
+                                $document.on('mouseup', mouseupEventHandler);
                             }
                         }
                     });
 
                     element.on('mouseup', function(event){
-                        scope.node.dragChildKey = null; // tell parent scope that the current element with his children are now not draggable
+                        /* tell parent scope that the current element with his children are now not draggable */
+                        scope.node.dragChildKey = null;
                     })
 
-                    function mousemove(event) {
-                        var rect = scope.node.dragRectangle[scope.key](),
-                            keys = Object.keys(scope.json),
-                            index = keys.indexOf(scope.key),
+                    function mousemoveEventHandler(event) {
+                        var rect = getRectangle(scope.node.dragElements[scope.key]()[0]),
                             meanBefore, meanAfter;
 
                         if (index >= keys.length - 1) meanAfter = Infinity;
-                        else meanAfter = scope.node.dragRectangle[keys[index + 1]]().meanY;
+                        else meanAfter = getRectangle(scope.node.dragElements[keys[index + 1]]()[0]).meanY;
 
                         if (index <= 0) meanBefore = -Infinity;
-                        else meanBefore = scope.node.dragRectangle[keys[index - 1]]().meanY;
+                        else meanBefore = getRectangle(scope.node.dragElements[keys[index - 1]]()[0]).meanY;
 
                         /* Check the criterion for swapping two sibling nodes */
-                        if (rect.top + rect.height > meanAfter + 1)
-                            scope.utils.swapNodes(keys[index], keys[index + 1]);
-                        else if (rect.top < meanBefore - 1)
-                            scope.utils.swapNodes(keys[index - 1], keys[index]);
-                        scope.$apply();
+                        if (rect.top + rect.height > meanAfter + 1) {
+                            swapKeys(index, index + 1);
+                            scope.node.dragElements[keys[index]]().parent().append(emptyElement);
+                            index += 1;
+                        }
+                        else if (rect.top < meanBefore - 1){
+                            swapKeys(index, index - 1);
+                            scope.node.dragElements[keys[index]]().parent().prepend(emptyElement);
+                            index -= 1;
+                        }
 
                         setPosition(startX, event.pageY - deltaY)
                     }
 
-                    function mouseup() {
+                    function mouseupEventHandler() {
+                        /* Fix position and update json and tree view */
+                        scope.utils.moveNode(scope.$index, index);
+                        scope.$apply();
+
                         element.removeClass('drag');
                         setPosition(startX, startY);
 
                         emptyElement.remove();
 
-                        $document.unbind('mousemove', mousemove);
-                        $document.unbind('mouseup', mouseup);
+                        $document.unbind('mousemove', mousemoveEventHandler);
+                        $document.unbind('mouseup', mouseupEventHandler);
                     }
 
-                    function setPosition(x,y){
+                    function setPosition(x, y){
                         element.css({
                             top: y + 'px',
                             left: x + 'px'
                         });
                     }
+
+                    function swapKeys(i, j){
+                        var key = keys[i];
+                        keys[i] = keys[j];
+                        keys[j] = key;
+                    }
+
+                    /* Get coordinates of rectangle region for the element 'el' */
+                    function getRectangle(el){
+                        var left = 0,
+                            top = 0,
+                            height = typeof el.offsetHeight === 'undefined' ? 0 : el.offsetHeight,
+                            width = typeof el.offsetWidth === 'undefined' ? 0 : el.offsetWidth;
+
+                        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+                            left += el.offsetLeft;
+                            top += el.offsetTop;
+                            el = el.offsetParent;
+                        }
+
+                        return { top: top, left: left, height: height, width: width, meanY: top + height / 2}
+                    };
                 }
             }
         });

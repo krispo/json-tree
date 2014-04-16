@@ -1,20 +1,21 @@
-# Editable JSON tree
+# Fully editable JSON tree
 
-An AngularJS directive used for displaying and editing JSON data in a tree view.
+An AngularJS directive used for displaying and editing JSON data in a tree view. It works independently of jQuery (only internal angular's jqLite).
 Available operations with nodes:
 
 * `add` new nodes,
 * `reset` node values to null,
 * `remove` node completely,
-* `change` value and type of the node (to object, array, string, number, boolean, null),
-* `drag` and `sort` tree nodes (via pressed `Ctrl`). (except array elements)
+* `change` node value,
+* `convert` type of the node (to object, array, string, number, boolean, null) implicitly,
+* `drag` and `sort` tree nodes (via pressed `Ctrl`).
 
 ## How to use
 
 Add scripts to your main html:
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
-<script src="https://rawgithub.com/krispo/json-tree/master/json-tree.js"></script>
+<script src="https://rawgit.com/krispo/json-tree/master/json-tree.js"></script>
 ```
 
 Inject `json-tree` directive into angular module and push some data to the controller:
@@ -57,4 +58,5 @@ Drag and sort your tree nodes via pressed `Ctrl` key.
 Add more style to prettify the view. See complete example in `example.html` file.
 
 ---
-Watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html).
+For more details of technically usage, please, watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html) and test it.
+There is given a short instruction.
