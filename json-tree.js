@@ -384,16 +384,11 @@
 
                     /* Get coordinates of rectangle region for the element 'el' */
                     function getRectangle(el){
-                        var left = 0,
-                            top = 0,
+                        var box = el.getBoundingClientRect(),
+                            top = Math.round(box.top + window.pageYOffset),
+                            left = Math.round(box.left + window.pageXOffset),
                             height = typeof el.offsetHeight === 'undefined' ? 0 : el.offsetHeight,
                             width = typeof el.offsetWidth === 'undefined' ? 0 : el.offsetWidth;
-
-                        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-                            left += el.offsetLeft;
-                            top += el.offsetTop;
-                            el = el.offsetParent;
-                        }
 
                         return { top: top, left: left, height: height, width: width, meanY: top + height / 2}
                     };
