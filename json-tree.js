@@ -12,7 +12,7 @@
                     node: '=?',
                     childs: '=?',
                     editLevel: '@',
-                    collapsed: '@'
+                    collapsedLevel: '@'
                 },
                 controller: function($scope){
 
@@ -188,7 +188,7 @@
                     $scope.node = {
 
                         /* check node is collapsed */
-                        isCollapsed: $scope.collapsed !== 'false', /* set up isCollapsed properties, by default - true */
+                        isCollapsed: ($scope.collapsedLevel && +$scope.collapsedLevel) ? (+$scope.collapsedLevel <= 0) : true, /* set up isCollapsed properties, by default - true */
 
                         /* check editing level is high */
                         isHighEditLevel: $scope.editLevel !== "low",
@@ -235,7 +235,7 @@
                                         '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
                                         '<input type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" ng-disabled="childs[key].type() === \'function\'" placeholder="null"/>' +
                                     '</span>' +
-                                    '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed="{{collapsed}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
+                                    '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
                                     '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +
                                     '<span class="remove" ng-dblclick="utils.removeNode(key)" ng-show="node.isHighEditLevel">-</span>' +
                                     '<span class="comma" ng-hide="utils.wrap.isLastIndex(node, $index + 1)">,</span>' +

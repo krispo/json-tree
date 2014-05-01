@@ -39,14 +39,21 @@ By default, it is used a **high** edit level that allows you to add new nodes,
 reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, null),
 drag and sort tree nodes.
 
-If you want to operate only with key-values of the nodes and avoid transformation of json tree, you can add **low** `edit-level` attribute like:
+If you want to operate only with key-values of the nodes and to avoid transformation of json tree, you can add **low** `edit-level` attribute like:
 ```html
 <json-tree json='jsonData' edit-level='low'></json-tree>
 ```
 
+You can also customize initial depth of tree view by adding `collapsed-level` attribute like, that takes a numeric value:
+```html
+<json-tree json='jsonData' collapsed-level='2'></json-tree>
+```
+If `collapsed-level` <= 0, then json-tree is fully collapsed. If `collapsed-level` == 1, then the first level node would be uncollapsed.
+If == 2 - the first and second level nodes. And so on.
+
 You can completely refresh directive by using directive internal refresh function. To access this function just add `node` attribute like:
 ```html
-<json-tree json='jsonData' edit-level='low' node='nodeOptions'></json-tree>
+<json-tree json='jsonData' node='nodeOptions'></json-tree>
 ```
 and then use it in controller as:
 ```javascript
