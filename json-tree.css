@@ -1,0 +1,44 @@
+/*
+JSON-TREE styles
+*/
+json-tree {
+    font-size: 13px;
+    font-family: monospace;
+}
+json-tree input[type="text"]{
+    width: 4em;
+    height: 12px;
+}
+json-tree input[type="number"]{
+    width: 4em;
+    height: 12px;
+}
+json-tree ul {
+    list-style: none;
+    margin: 0 0 0 -24px;
+}
+json-tree .key {
+    color: darkred;
+}
+json-tree .add {
+    color: green;
+}
+json-tree .reset {
+    color: steelblue;
+}
+json-tree .remove {
+    color: red;
+}
+json-tree .comma {
+    color: #c0c0c0;
+}
+json-tree .drag {
+    position: absolute;
+    background-color: #e2efff;
+    opacity:0.5;
+    cursor: pointer;
+}
+json-tree .empty {
+    border: 1px dashed darkred;
+    background-color: #e2efff;
+}

@@ -2,49 +2,8 @@
 <html>
 <head>
     <title>JSON Viewer</title>
+    <link rel="stylesheet" href="json-tree.css">
     <style>
-        /* for json-tree ----------------------------------- */
-        json-tree {
-            font-size: 13px;
-            font-family: monospace;
-        }
-        json-tree input[type="text"]{
-            width: 4em;
-            height: 11px;
-        }
-        json-tree ul {
-            list-style: none;
-            margin: 0 0 0 -24px;
-        }
-        .key {
-            color: darkred;
-        }
-        .add {
-            color: green;
-        }
-        .reset {
-            color: blue;
-        }
-        .remove {
-            color: red;
-        }
-        .comma {
-            color: #c0c0c0;
-        }
-
-        json-tree .drag {
-            position: absolute;
-            background-color: #e2efff;
-            opacity:0.5;
-            cursor: pointer;
-        }
-
-        json-tree .empty {
-            border: 1px dashed darkred;
-            background-color: #e2efff;
-        }
-
-        /* for table -------------------------------------- */
         table tr td {
             display: inline-block;
             vertical-align: top;
