@@ -26,7 +26,7 @@ Add dependencies to the `<head>` section of your main html:
 ```html
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/json-tree/json-tree.js"></script>
-<link rel="stylesheet" href="bower_components/json-tree/json-tree.css"></link>
+<link rel="stylesheet" href="bower_components/json-tree/json-tree.css">
 ```
 
 If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.0.1.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.0.1.tar.gz)).
