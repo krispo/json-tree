@@ -19,6 +19,9 @@
                     /* initialize container for child nodes */
                     $scope.childs = {};
 
+                    /* initialize container for nodes with functions */
+                    $scope.jsonFn = {};
+
                     /* define auxiliary functions */
                     $scope.utils = {
 
@@ -165,6 +168,36 @@
                             }
                         },
 
+                        /* handle textarea fith functions */
+                        textarea: {
+                            init: function(key){
+                                $scope.jsonFn[key] = $scope.json[key].toString().trim();
+                            },
+                            tryGetFunction: function(key){
+                                try {
+                                    var func = eval( '(' + $scope.jsonFn[key].trim() + ')' );
+                                    return func;
+                                } catch(e){};
+                            },
+                            elementHandler: function(key){
+                                var func = $scope.utils.textarea.tryGetFunction(key);
+                                func
+                                    ? angular.element($scope.utils.textarea.element).removeClass('invalid').addClass('valid')
+                                    : angular.element($scope.utils.textarea.element).removeClass('valid').addClass('invalid');
+                            },
+                            onFocus: function(e, key){
+                                $scope.utils.textarea['element'] = e.currentTarget;
+                                $scope.utils.textarea.elementHandler(key);
+                            },
+                            onChange: function(key){
+                                $scope.utils.textarea.elementHandler(key);
+                            },
+                            onBlur: function(key){
+                                var func = $scope.utils.textarea.tryGetFunction(key);
+                                func ? $scope.json[key] = func : $scope.utils.textarea.init(key);
+                            }
+                        },
+
                         /* to skip ordering in ng-repeat */
                         keys: function(obj){
                             return (obj instanceof Object) ? Object.keys(obj) : [];
@@ -234,7 +267,8 @@
                                     '<span ng-hide="childs[key].isObject()">' +
                                         '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
                                         '<input ng-show="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
-                                        '<input ng-show="childs[key].type() !== \'number\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" ng-disabled="childs[key].type() === \'function\'" placeholder="null"/>' +
+                                        '<textarea ng-show="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
+                                        '<input ng-show="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
                                     '</span>' +
                                     '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
                                     '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +
