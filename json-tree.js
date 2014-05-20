@@ -65,7 +65,8 @@
                         /* add new node to the collection */
                         addNode: function(key, value){
                             var json = null;
-                            try { json = JSON.parse(value); } catch (e){}
+                            try { json = JSON.parse(value); } catch (e){}; //try get json
+                            if (json === null) json = $scope.utils.tryGetFunction(value) || json; //try get function
 
                             /* add element to the object */
                             if ($scope.node.type() === 'object') {
@@ -110,12 +111,21 @@
 
                         /* validate text if input to the form */
                         validateNode: function(key){
-                            /* check if null or "" */
-                            if (!$scope.json[key]) $scope.json[key] = null;
+                            /* check if null */
+                            if ($scope.json[key] === null);
+
+                            /* check if undefined or "" */
+                            else if ($scope.json[key] === undefined | $scope.json[key] === '') $scope.json[key] = null;
 
                             /* try to convert string to number */
                             else if (!isNaN(+$scope.json[key]) && isFinite($scope.json[key]))
                                 $scope.json[key] = +$scope.json[key];
+
+                            /* try parse to function */
+                            else if ($scope.utils.tryGetFunction($scope.json[key])){
+                                $scope.json[key] = $scope.utils.tryGetFunction($scope.json[key]);
+                                $scope.utils.textarea.init(key);
+                            }
 
                             /* try to parse string to json */
                             else {
@@ -170,31 +180,50 @@
 
                         /* handle textarea fith functions */
                         textarea: {
+                            /* define function value for textarea */
                             init: function(key){
-                                $scope.jsonFn[key] = $scope.json[key].toString().trim();
+                                if ($scope.json[key] !== null) $scope.jsonFn[key] = $scope.json[key].toString().trim();
                             },
-                            tryGetFunction: function(key){
-                                try {
-                                    var func = eval( '(' + $scope.jsonFn[key].trim() + ')' );
-                                    return func;
-                                } catch(e){};
-                            },
-                            elementHandler: function(key){
-                                var func = $scope.utils.textarea.tryGetFunction(key);
+
+                            /* validate if element value is function */
+                            validate: function(key){
+                                var func = $scope.utils.tryGetFunction($scope.jsonFn[key]);
                                 func
                                     ? angular.element($scope.utils.textarea.element).removeClass('invalid').addClass('valid')
                                     : angular.element($scope.utils.textarea.element).removeClass('valid').addClass('invalid');
                             },
+
+                            /* onFocus event handler */
                             onFocus: function(e, key){
                                 $scope.utils.textarea['element'] = e.currentTarget;
-                                $scope.utils.textarea.elementHandler(key);
+                                $scope.utils.textarea.validate(key);
                             },
+
+                            /* onChange event handler */
                             onChange: function(key){
-                                $scope.utils.textarea.elementHandler(key);
+                                $scope.utils.textarea.validate(key);
                             },
+
+                            /* onBlur event handler */
                             onBlur: function(key){
-                                var func = $scope.utils.textarea.tryGetFunction(key);
-                                func ? $scope.json[key] = func : $scope.utils.textarea.init(key);
+                                var func = $scope.utils.tryGetFunction($scope.jsonFn[key]);
+                                if (func) $scope.json[key] = func;
+                                else { //if value is not a valid function
+                                    $scope.json[key] = $scope.jsonFn[key];
+                                    delete $scope.jsonFn[key];
+                                    $scope.utils.validateNode(key); //full validation for node
+                                }
+                            }
+                        },
+
+                        /* try to convert string to function */
+                        /* it is important that function element MUST start with 'function' keyword */
+                        tryGetFunction: function(str){
+                            if (str.trim().substring(0, 8) === 'function'){
+                                try {
+                                    var func = eval( '(' + str.trim() + ')' );
+                                    return func;
+                                } catch(e){};
                             }
                         },
 
@@ -267,7 +296,7 @@
                                     '<span ng-hide="childs[key].isObject()">' +
                                         '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
                                         '<input ng-show="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
-                                        '<textarea ng-show="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
+                                        '<textarea ng-if="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
                                         '<input ng-show="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
                                     '</span>' +
                                     '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +

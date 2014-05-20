@@ -12,12 +12,14 @@ json-tree input[type="text"]{
 json-tree input[type="number"]{
     width: 4em;
     height: 12px;
+    vertical-align: middle;
 }
 json-tree textarea {
     width: 5em;
     height: 12px;
     padding-top: 0px;
     margin-bottom: -4px;
+    border-color: gray;
     resize: none;
     overflow: hidden;
 }
