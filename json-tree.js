@@ -174,7 +174,7 @@
                                 var temp = $scope.json[i];
                                 $scope.json.splice(i, 1);
                                 $scope.json.splice(j, 0, temp);
-                                $scope.refresh();
+                                $scope.$apply($scope.refresh());
                             }
                         },
 
