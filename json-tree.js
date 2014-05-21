@@ -195,6 +195,7 @@
 
                             /* onFocus event handler */
                             onFocus: function(e, key){
+                                $scope.utils.textarea['valueBeforeEditing'] = angular.copy($scope.jsonFn[key]); //keep value before editing
                                 $scope.utils.textarea['element'] = e.currentTarget;
                                 $scope.utils.textarea.validate(key);
                             },
@@ -206,6 +207,9 @@
 
                             /* onBlur event handler */
                             onBlur: function(key){
+                                //emit onFunctionChange event if the function definition was changed.
+                                if ($scope.utils.textarea.valueBeforeEditing !== $scope.jsonFn[key]) $scope.$emit('onFunctionChanged');
+
                                 var func = $scope.utils.tryGetFunction($scope.jsonFn[key]);
                                 if (func) $scope.json[key] = func;
                                 else { //if value is not a valid function
