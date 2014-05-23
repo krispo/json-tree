@@ -51,7 +51,7 @@ and in html again you can use it like:
 ```
 
 By default, it is used a **high** edit level that allows you to add new nodes,
-reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, null),
+reset node values to null, completely remove node, change value and type of the node (to object, array, string, number, boolean, function, null),
 drag and sort tree nodes.
 
 If you want to operate only with key-values of the nodes and to avoid transformation of json tree, you can add **low** `edit-level` attribute like:
