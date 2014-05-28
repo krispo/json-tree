@@ -1,0 +1,35 @@
+<style>
+    #eventsTable {
+        width: 100%;
+        /*border-style: solid;
+        border-width: 1px;*/
+
+    }
+    #eventsTable tr, td, th {
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+    }
+    #eventsTable th {
+        text-align: center;
+    }
+    #eventsTable .event {
+        width: 30%;
+    }
+    #eventsTable .desc {
+        width: 70%;
+    }
+</style>
+<div>Directive emits events that your app can subscribe to.</div>
+<table id="eventsTable" style="margin-top: 10px;margin-bottom: 10px;">
+    <tr>
+        <th class="event">Events</th>
+        <th class="desc">Description</th>
+    </tr>
+    <tr>
+        <td class="event">onFunctionChanged</td>
+        <td class="desc">arises if the 'function' field have been changed</td>
+    </tr>
+</table>
+In your code it can be used like:
+<pre><code class="javascript">$scope.$on('EventName', function(e){ /* do smth */ });</code></pre>

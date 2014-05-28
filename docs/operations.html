@@ -1,7 +1,7 @@
 <div>Operations with nodes: <b>add, reset, remove, change value and type, drag and sort</b></div>
 
 <div style="margin-left: 2em;">
-    <input style="width: 4em; height: 11px;"/> --- is an input field, where you can input any JSON data. The directive automatically determine the type and reconstruct tree view.
+    <input style="width: 4.3em; height: 18px;"/> --- is an input field, where you can input any JSON data. The directive automatically determine the type and reconstruct tree view.
     <div style="margin-left: 5em;">Examples of typing:<br/>
         [1,2,3] --- convert to Array,<br/>
         {"json": "tree"} --- convert to Object,<br/>
@@ -11,13 +11,11 @@
         function(){} --- convert to Function
     </div>
     <br/>
-    &laquo;<span class="add"> + </span>&raquo; --- add element(s) to the collection. For example, if you add [4,"5",6] to [1,2,3] -> the result is [1,2,3,4,"5",6]. If you add [[4,"5",6]] to [1,2,3] -> the result is [1,2,3,[4,"5",6]].
+    &laquo;<span style="color: green;"> + </span>&raquo; --- add element(s) to the collection. For example, if you add [4,"5",6] to [1,2,3] -> the result is [1,2,3,4,"5",6]. If you add [[4,"5",6]] to [1,2,3] -> the result is [1,2,3,[4,"5",6]].
     <br/>
-    &laquo;<span class="reset"> ~ </span>&raquo; --- reset node value to null.
+    &laquo;<span style="color: steelblue;"> ~ </span>&raquo; --- reset node value to null.
     <br/>
-    &laquo;<span class="remove"> - </span>&raquo; --- completely remove the node.
+    &laquo;<span style="color: red;"> - </span>&raquo; --- completely remove the node.
     <br/>
-    &laquo;Ctrl&raquo; --- press Ctrl key to drag and sort tree nodes.
+    &laquo;<span style="color: #A75031;">Ctrl</span>&raquo; --- press Ctrl key to drag and sort tree nodes.
 </div>
-
-<h3>Drag and sort tree nodes via pressed <code style="color: #A75031;">'Ctrl'</code> key</h3>

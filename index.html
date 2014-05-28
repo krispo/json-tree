@@ -101,9 +101,12 @@
             .span50 {
                 width: 50%;
             }
-        }
-        #doc_content .span25 {
-            width: 25%;
+            .span33 {
+                width: 33%;
+            }
+            .span25 {
+                width: 25%;
+            }
         }
         #docs_content .hljs {
             background: rgba(236, 255, 220, 0.47);
@@ -112,6 +115,9 @@
         #docs_content pre {
             margin: 15px 0px 15px 0px;
             padding: 0px;
+        }
+        #docs_content h3 {
+            text-decoration: underline;
         }
 
     </style>
@@ -155,7 +161,6 @@
             </div>
         </div>
     </div>
-    <hr>
 </div>
 
 <div id="footer">
@@ -233,44 +238,29 @@
                 $scope.inputdata = '';
             }
         })
+
+        .controller('attrCtrl', function($scope){
+            $scope.jsonData = {
+                key1: {
+                    key11: {
+                        key111: 'str'
+                    },
+                    key12: [1,2,3]
+                },
+                key2: [1,2,3]
+            }
+        })
     })()
 </script>
 
 <script>
     myApp.controller('quickstartCtrl', function($scope, $http){
-        $http.get('doc.json').success(function(metadata){
-            $scope.docs = metadata;
-        });
-
-        $(document).ready(function(){
-
-            $('#sidebar').affix({
-                offset: {
-                    top: 119
+        setTimeout(function(){
+                    $http.get('doc.json').success(function(metadata){
+                        $scope.docs = metadata;
+                    })
                 }
-            });
-
-            setTimeout(function(){
-                $(document.body).scrollspy({
-                    target: '#rightCol',
-                    offset: $('.navbar').outerHeight(true) + 10
-                });
-
-                /* smooth scrolling sections */
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top - 10
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                });
-            }, 300);
-        });
+                ,200)
     })
 </script>
 
@@ -282,6 +272,33 @@
                 hljs.highlightBlock(e);
             });
         }, 100);
+
+        $('#sidebar').affix({
+            offset: {
+                top: 119
+            }
+        });
+
+        setTimeout(function(){
+            $(document.body).scrollspy({
+                target: '#rightCol',
+                offset: $('.navbar').outerHeight(true) + 10
+            });
+
+            /* smooth scrolling sections */
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 10
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        }, 300);
     })
 </script>
 
