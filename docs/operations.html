@@ -1,0 +1,23 @@
+<div>Operations with nodes: <b>add, reset, remove, change value and type, drag and sort</b></div>
+
+<div style="margin-left: 2em;">
+    <input style="width: 4em; height: 11px;"/> --- is an input field, where you can input any JSON data. The directive automatically determine the type and reconstruct tree view.
+    <div style="margin-left: 5em;">Examples of typing:<br/>
+        [1,2,3] --- convert to Array,<br/>
+        {"json": "tree"} --- convert to Object,<br/>
+        true --- convert to Boolean,<br/>
+        20.14 --- convert to Number,<br/>
+        Hello World! --- convert to String, <br/>
+        function(){} --- convert to Function
+    </div>
+    <br/>
+    &laquo;<span class="add"> + </span>&raquo; --- add element(s) to the collection. For example, if you add [4,"5",6] to [1,2,3] -> the result is [1,2,3,4,"5",6]. If you add [[4,"5",6]] to [1,2,3] -> the result is [1,2,3,[4,"5",6]].
+    <br/>
+    &laquo;<span class="reset"> ~ </span>&raquo; --- reset node value to null.
+    <br/>
+    &laquo;<span class="remove"> - </span>&raquo; --- completely remove the node.
+    <br/>
+    &laquo;Ctrl&raquo; --- press Ctrl key to drag and sort tree nodes.
+</div>
+
+<h3>Drag and sort tree nodes via pressed <code style="color: #A75031;">'Ctrl'</code> key</h3>

@@ -7,11 +7,20 @@
     <file path="$PROJECT_DIR$/../dc/partials/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401107081362" ignored="false" />
     <file path="/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401106534808" ignored="false" />
     <file path="$PROJECT_DIR$/../dc/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401123482609" ignored="false" />
-    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401213264626" ignored="false" />
+    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401303453977" ignored="false" />
     <file path="/example.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401177279673" ignored="false" />
-    <file path="/json-tree.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401140447507" ignored="false" />
+    <file path="/json-tree.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401281306365" ignored="false" />
     <file path="/Dummy.txt" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401140847711" ignored="false" />
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/js/app.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401178217233" ignored="false" />
+    <file path="/quickstart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401274294089" ignored="false" />
+    <file path="/examples.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401283489373" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/liveedit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401281999199" ignored="false" />
+    <file path="/tryit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401289453600" ignored="false" />
+    <file path="$PROJECT_DIR$/../json-tree/Readme.md" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299236216" ignored="false" />
+    <file path="/Readme.md" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299236216" ignored="false" />
+    <file path="$PROJECT_DIR$/../json-tree/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299248210" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/json-tree/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401300415369" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/json-tree/json-tree.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401300434375" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,37 +40,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="28" selection-start="3692" selection-end="3692" vertical-scroll-proportion="0.2837838">
+            <state line="33" column="51" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-20.625">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="examples.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/examples.html">
+      <file leaf-file-name="json-tree.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bower_components/json-tree/json-tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="6" selection-start="2560" selection-end="2560" vertical-scroll-proportion="-29.375">
+            <state line="382" column="54" selection-start="20656" selection-end="20656" vertical-scroll-proportion="0.39114392">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tryit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/tryit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="11" selection-start="321" selection-end="656" vertical-scroll-proportion="-6.25">
               <folding>
-                <element signature="n#style#0;n#code#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#code#0;n#h2#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#code#1;n#h2#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#pre#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#2;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,7 +88,7 @@
       <file leaf-file-name="doc.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doc.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="479" selection-end="479" vertical-scroll-proportion="-15.0">
+            <state line="7" column="24" selection-start="169" selection-end="169" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
@@ -87,15 +105,22 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/example.html" />
+        <option value="$PROJECT_DIR$/lib/rainbow.min.css" />
+        <option value="$PROJECT_DIR$/lib/docco.css" />
+        <option value="$PROJECT_DIR$/docs/quickstart.html" />
         <option value="$PROJECT_DIR$/lib/json-tree.css" />
-        <option value="$PROJECT_DIR$/doc.json" />
+        <option value="$PROJECT_DIR$/docs/operations.html" />
         <option value="$PROJECT_DIR$/docs/examples.html" />
+        <option value="$PROJECT_DIR$/doc.json" />
+        <option value="$PROJECT_DIR$/docs/tryit.html" />
+        <option value="$PROJECT_DIR$/bower_components/json-tree/json-tree.js" />
+        <option value="$PROJECT_DIR$/docs/attributes.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="207" />
+    <option name="y" value="17" />
     <option name="width" value="1143" />
     <option name="height" value="727" />
   </component>
@@ -144,20 +169,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json-tree-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json-tree-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -172,8 +183,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bower_components/json-tree" />
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img" />
@@ -207,7 +219,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="207" y="0" width="1143" height="727" extended-state="0" />
+    <frame x="0" y="17" width="1143" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -289,56 +301,110 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/json-tree.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="31" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.994709">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/json-tree.js">
+    <entry file="file://$PROJECT_DIR$/lib/highlight.pack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc.json">
+    <entry file="file://$PROJECT_DIR$/lib/docco.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="479" selection-end="479" vertical-scroll-proportion="-15.0">
+        <state line="0" column="1430" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/examples.html">
+    <entry file="file://$PROJECT_DIR$/docs/quickstart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="6" selection-start="2560" selection-end="2560" vertical-scroll-proportion="-29.375">
+        <state line="32" column="45" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.9039548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/json-tree/json-tree.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/tryit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="11" selection-start="321" selection-end="656" vertical-scroll-proportion="-6.25">
           <folding>
-            <element signature="n#style#0;n#code#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#code#0;n#h2#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#code#1;n#h2#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#2;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="24" selection-start="169" selection-end="169" vertical-scroll-proportion="-4.375">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="28" selection-start="3692" selection-end="3692" vertical-scroll-proportion="0.2837838">
+        <state line="33" column="51" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-20.625">
           <folding>
             <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/attributes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="14" selection-start="510" selection-end="510" vertical-scroll-proportion="0.2027027">
+          <folding>
+            <element signature="n#style#0;n#code#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#code#1;n#h2#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/operations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="93" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.63706565">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#code#0;n#h3#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/json-tree/json-tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="382" column="54" selection-start="20656" selection-end="20656" vertical-scroll-proportion="0.39114392">
+          <folding />
         </state>
       </provider>
     </entry>

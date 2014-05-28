@@ -6,12 +6,17 @@
 <head>
     <title>JSON Editor</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/json-tree.css">
+    <link rel="stylesheet" href="lib/docco.min.css">
+    <link rel="stylesheet" href="bower_components/json-tree/json-tree.css">
     <style>
         html {
             border-top: 5px solid #A75031;
             border-bottom: 51px solid #A75031;
+            -webkit-box-shadow: inset 0 0px 5px rgba(0,0,0,.3);
+            -moz-box-shadow: inset 0 0px 5px rgba(0,0,0,.3);
             box-shadow: inset 0 0px 5px rgba(0,0,0,.3);
+            -webkit-text-shadow: 0 0px 1px rgba(0,0,0,.5);
+            -moz-text-shadow: 0 0px 1px rgba(0,0,0,.5);
             text-shadow: 0 0px 1px rgba(0,0,0,.5);
         }
         body {
@@ -21,28 +26,31 @@
         .logo {
             z-index: 100;
         }
-        #socialb {
-            vertical-align: bottom;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: -49px;
+        @media (min-width: 820px) {
+            #footer {
+                vertical-align: bottom;
+                /*text-align: center;*/
+                margin-top: 30px;
+                margin-bottom: -49px;
+            }
+            #footer .span1 {
+                display: inline-block;
+                vertical-align: top;
+                width: 33%;
+                text-align: center;
+            }
+        }
+        #footer a {
+            color: #ffffff;
+            text-decoration: none;
         }
         .asd {
            color: #A75031;
-            background-color: #85C882;
+           background-color: #85C882;
         }
-        table tr td {
-            display: inline-block;
-            vertical-align: top;
-            width: inherit;
-            min-width: 30em;
-        }
-
 
         /********************************************************/
-        .affix-top,.affix{
-            position: static;
-        }
+
         @media (min-width: 979px) {
             #sidebar.affix-top {
                 position: static;
@@ -51,7 +59,7 @@
             }
             #sidebar.affix {
                 position: fixed;
-                top:70px;
+                top:50px;
                 width:228px;
             }
         }
@@ -67,7 +75,7 @@
         #sidebar > li.active {
             border:0 #bfd2af solid;
             border-left-width:4px;
-            background-color: rgba(236, 255, 220, 0.62);
+            background: rgba(236, 255, 220, 0.47);
         }
         #sidebar .caption {
             color: #bfd2af;
@@ -78,20 +86,6 @@
             margin: 0px;
         }
 
-        #docs_content a {
-            color: #168a70;
-            -webkit-text-shadow: 0px 0px 1px #9c7211;
-            -moz-text-shadow: 0px 0px 1px #9c7211;
-            text-shadow: 0px 0px 1px #9c7211;
-            -webkit-transition: all .25s;
-            -moz-transition: all .25s;
-            -o-transition: all .25s;
-            transition: all .25s;
-        }
-        #docs_content a:hover {
-            color: #c06c00;
-            text-decoration: none;
-        }
         #docs_content .note {
             margin: 10px 0px 10px 0px;
             padding-left: 10px;
@@ -99,35 +93,46 @@
             border-left-width: 4px;
             border-left-color: #a6b997;
         }
-
+        @media (min-width: 600px) {
+            .span {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .span50 {
+                width: 50%;
+            }
+        }
+        #doc_content .span25 {
+            width: 25%;
+        }
         #docs_content .hljs {
-            background: #2c3e50;
+            background: rgba(236, 255, 220, 0.47);
+            /*background: rgba(236, 255, 220, 0.62);*/
         }
         #docs_content pre {
             margin: 15px 0px 15px 0px;
             padding: 0px;
-            /* background-color: #fff9d4;*/
-            -webkit-box-shadow: 0px 0px 10px -1px #698eb1;
-            -moz-box-shadow: 0px 0px 10px -1px #698eb1;
-            box-shadow: 0px 0px 10px -1px #698eb1;
         }
 
     </style>
 </head>
 <body>
-<h1 style="text-align: center; margin-top: 0px;">
+<h1 style="margin: 0px;">
     <img class="logo" src="img/logo.png" style="zoom: 70%;" alt="">
-    <span>Editable JSON-tree AngularJS directive</span>
+    <span style="width: 80%; text-align: center; vertical-align: middle;" class="span">
+        <div>JSON-tree<sup style="font-size: x-large;"><a href="https://github.com/krispo/json-tree/releases/tag/v0.0.3" style="text-decoration:none; color:#f1f1f1;" target="_blank">v0.0.3</a></sup></div>
+        <div style="font-size: large; margin-top: 10px;">Editable  AngularJS directive</div>
+    </span>
 </h1>
 
-<div>Operations with nodes: <b>add, reset, remove, change value and type, drag and sort</b></div>
-<hr/>
+<hr style="width: 70%; margin-top: 10px;">
+
 <div ng-app="myApp" ng-cloak>
 
     <div ng-controller="quickstartCtrl">
         <div class="container">
             <div class="row">
-                <div class="col-md-9" id="docs_content">
+                <div class="col-md-9" id="docs_content" style="position: static;">
                     <div ng-repeat="meta in docs">
                         <div id="{{ meta.id }}" ng-if="meta.id !== -1">
                             <h2>{{ meta.title }}</h2>
@@ -137,7 +142,7 @@
                     </div>
                 </div>
                 <div class="col-md-3" id="rightCol">
-                    <ul class="nav nav-stacked" id="sidebar">
+                    <ul class="nav" id="sidebar">
                         <li ng-repeat="meta in docs">
                             <a href="#{{ meta.id }}" ng-if="meta.id !== -1">{{ meta.title }}</a>
                             <div ng-if="meta.id === -1" style="text-align: right;">
@@ -153,15 +158,28 @@
     <hr>
 </div>
 
-<div id="socialb">
-    <span><iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=krispo&repo=json-tree&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></span>
-    <span><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://krispo.github.io/json-tree">Tweet</a></span>
+<div id="footer">
+    <div class="span1" style="color: rgba(255,255,255,0.38);">&copy 2014 Konstantin Skipor, <a href="https://github.com/krispo/json-tree/blob/master/LICENSE">MIT License</a></div>
+    <div class="span1">
+        <span><iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=krispo&repo=json-tree&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe></span>
+        <span><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://krispo.github.io/json-tree">Tweet</a></span>
+    </div>
+    <div class="span1">
+        <a href="https://github.com/krispo/json-tree/issues?state=open">Issues</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/krispo/json-tree/releases">Releases</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/krispo/json-tree/archive/v0.0.3.zip">zip</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/krispo/json-tree/archive/v0.0.3.tar.gz">tar.gz</a>
+    </div>
 </div>
 <a href="https://github.com/krispo/json-tree"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="lib/json-tree.js"></script>
+<script src="lib/highlight.pack.js"></script>
+<script src="bower_components/json-tree/json-tree.js"></script>
 <script>
     var myApp = angular.module('myApp', ['json-tree']);
 
@@ -170,9 +188,9 @@
             // sample json data
             function defaultData() {
                 return {
-                    key1: 'str',
-                    key2: 12.34,
-                    key3: null,
+                    string: 'str',
+                    number: 12.34,
+                    boolean: true,
                     array: [3, 1, 2],
                     object: {
                         anotheObject: {
@@ -181,28 +199,22 @@
                         }
                     },
                     arrayOfObjects: [{
-                        dataFromFunction: new funcData(),
-                        key1: 'Hello World!'
+                        key1: 'Hello',
+                        key2: 'World!'
                     },{
                         bool: true,
                         someFunction: function(){
-                            /* not editable */
                             return 'some function'
                         }
-                    }],
-                    key4: undefined
+                    },
+                        true,
+                        []
+                    ],
+                    function1: function(){ alert('This is function1 !'); },
+                    null: null,
+                    undefined: undefined
                 };
             }
-
-            function funcData(){
-                return {
-                    fullname: {
-                        first: 'json',
-                        last: 'tree'
-                    },
-                    version : "1.0.1"
-                }
-            };
 
             function parse(data){
                 return data ? JSON.parse(data) : {};
@@ -234,7 +246,7 @@
 
             $('#sidebar').affix({
                 offset: {
-                    top: 240
+                    top: 119
                 }
             });
 
@@ -251,7 +263,7 @@
                         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                         if (target.length) {
                             $('html,body').animate({
-                                scrollTop: target.offset().top - 50
+                                scrollTop: target.offset().top - 10
                             }, 1000);
                             return false;
                         }
@@ -262,6 +274,16 @@
     })
 </script>
 
+<script>
+    $(document).ready(function() {
+        setTimeout(function(){
+            hljs.initHighlightingOnLoad();
+            $('pre code').each(function(i, e) {
+                hljs.highlightBlock(e);
+            });
+        }, 100);
+    })
+</script>
 
 <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

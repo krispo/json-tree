@@ -1,0 +1,13 @@
+<div ng-controller="myCtrl">
+    <textarea ng-model="inputdata" placeholder="Input Your JSON..." style="width: 20em; height: 5em;"></textarea>
+    <button ng-click="set(inputdata)" style="vertical-align: top;">Set</button>
+    <button ng-click="default()" style="vertical-align: top;">Default</button>
+    <br/><br/>
+    <div class="row-fluid">
+        <div class="span span50">
+            <json-tree json="jsonData" node="nodeOptions" collapsed-level="1"></json-tree></div><div class="span span50">
+            <pre style="background-color: rgba(236, 255, 220, 0.47);"><code class="no-highlight">{{jsonData | json}}</code></pre>
+        </div>
+    </div>
+    <button ng-click="jsonData.function1()">Call <span style="color: #A75031;">function1</span></button>
+</div>

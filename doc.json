@@ -1,25 +1,19 @@
 [{
-    "id": "doc_install",
-    "title": "Install",
-    "url": "./docs/install.html"
+    "id": "doc_quickstart",
+    "title": "Quick start",
+    "url": "./docs/quickstart.html"
 },{
-    "id": "doc_basic",
-    "title": "Basic usage",
-    "url": "./docs/basic.html"
+    "id": "doc_tryit",
+    "title": "Try it",
+    "url": "./docs/tryit.html"
 },{
-    "id": -1,
-    "caption": "Basic examples"
+    "id": "doc_operations",
+    "title": "Operations",
+    "url": "./docs/operations.html"
 },{
-    "id": "doc_examples",
-    "title": "Examples",
-    "url": "./docs/examples.html"
-},{
-    "id": -1,
-    "caption": "Configurations"
-},{
-    "id": "doc_wrapper",
-    "title": "Wrapper",
-    "url": "./docs/wrapper.html"
+    "id": "doc_attributes",
+    "title": "Attributes",
+    "url": "./docs/attributes.html"
 },{
     "id": "doc_events",
     "title": "Events",
