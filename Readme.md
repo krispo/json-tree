@@ -7,7 +7,7 @@ Available operations with nodes:
 * `reset` node values to null,
 * `remove` node completely,
 * `change` node value,
-* `convert` type of the node (to object, array, string, number, boolean, null) implicitly,
+* `convert` type of the node (to object, array, string, number, boolean, null, function) implicitly,
 * `drag` and `sort` tree nodes (via pressed `Ctrl`).
 
 ## How to use
