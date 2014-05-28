@@ -255,12 +255,12 @@
 
 <script>
     myApp.controller('quickstartCtrl', function($scope, $http){
-        setTimeout(function(){
+        //setTimeout(function(){
                     $http.get('doc.json').success(function(metadata){
                         $scope.docs = metadata;
                     })
-                }
-                ,200)
+        //        }
+        //        ,100)
     })
 </script>
 <script>
