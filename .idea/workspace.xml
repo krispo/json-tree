@@ -7,7 +7,7 @@
     <file path="$PROJECT_DIR$/../dc/partials/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401107081362" ignored="false" />
     <file path="/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401106534808" ignored="false" />
     <file path="$PROJECT_DIR$/../dc/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401123482609" ignored="false" />
-    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401318039851" ignored="false" />
+    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401318499285" ignored="false" />
     <file path="/example.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401177279673" ignored="false" />
     <file path="/json-tree.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401281306365" ignored="false" />
     <file path="/Dummy.txt" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401140847711" ignored="false" />
@@ -47,7 +47,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="12" selection-start="10736" selection-end="10736" vertical-scroll-proportion="9.1277895">
+            <state line="264" column="9" selection-start="9533" selection-end="9533" vertical-scroll-proportion="0.48681542">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -490,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="12" selection-start="10736" selection-end="10736" vertical-scroll-proportion="9.1277895">
+        <state line="264" column="9" selection-start="9533" selection-end="9533" vertical-scroll-proportion="0.48681542">
           <folding>
             <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />

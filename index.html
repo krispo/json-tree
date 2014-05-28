@@ -263,16 +263,8 @@
                 ,200)
     })
 </script>
-
 <script>
-    $(document).ready(function() {
-        setTimeout(function(){
-            hljs.initHighlightingOnLoad();
-            $('pre code').each(function(i, e) {
-                hljs.highlightBlock(e);
-            });
-        }, 100);
-
+    $(document).ready(function(){
         $('#sidebar').affix({
             offset: {
                 top: 119
@@ -299,6 +291,16 @@
                 }
             });
         }, 300);
+    })
+</script>
+<script>
+    $(document).ready(function() {
+        setTimeout(function(){
+            hljs.initHighlightingOnLoad();
+            $('pre code').each(function(i, e) {
+                hljs.highlightBlock(e);
+            });
+        }, 100);
     })
 </script>
 
