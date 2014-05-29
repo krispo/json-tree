@@ -25,6 +25,7 @@
     <file path="/attributes.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401316736999" ignored="false" />
     <file path="/operations.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401314022197" ignored="false" />
     <file path="/events.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401317597936" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401347343591" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="12" selection-start="10544" selection-end="10544" vertical-scroll-proportion="0.7525355">
+            <state line="128" column="84" selection-start="3983" selection-end="3983" vertical-scroll-proportion="0.7261663">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -490,7 +491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="12" selection-start="10544" selection-end="10544" vertical-scroll-proportion="0.7525355">
+        <state line="128" column="84" selection-start="3983" selection-end="3983" vertical-scroll-proportion="0.7261663">
           <folding>
             <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
