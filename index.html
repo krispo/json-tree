@@ -158,7 +158,7 @@
                         <div id="{{ meta.id }}" ng-if="meta.id !== -1">
                             <h2>{{ meta.title }}</h2>
                             <div ng-include="meta.url"></div>
-                            <hr>
+                            <hr ng-if="!$last">
                         </div>
                     </div>
 

@@ -7,7 +7,7 @@
     <file path="$PROJECT_DIR$/../dc/partials/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401107081362" ignored="false" />
     <file path="/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401106534808" ignored="false" />
     <file path="$PROJECT_DIR$/../dc/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401485342372" ignored="false" />
-    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401536926426" ignored="false" />
+    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401537670651" ignored="false" />
     <file path="/example.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401177279673" ignored="false" />
     <file path="/json-tree.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401281306365" ignored="false" />
     <file path="/Dummy.txt" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401513670261" ignored="false" />
@@ -63,10 +63,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="117" selection-start="6037" selection-end="6037" vertical-scroll-proportion="-27.5">
+            <state line="159" column="62" selection-start="5252" selection-end="5252" vertical-scroll-proportion="0.53281856">
               <folding>
                 <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -111,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attributes.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="attributes.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/attributes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.56563705">
+            <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-18.75">
               <folding />
             </state>
           </provider>
@@ -463,25 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="117" selection-start="6037" selection-end="6037" vertical-scroll-proportion="-27.5">
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="76" selection-start="270" selection-end="270" vertical-scroll-proportion="0.32352942">
@@ -505,8 +486,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/attributes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.56563705">
+        <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-18.75">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="62" selection-start="5252" selection-end="5252" vertical-scroll-proportion="0.53281856">
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
