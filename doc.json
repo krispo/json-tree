@@ -18,4 +18,11 @@
     "id": "doc_events",
     "title": "Events",
     "url": "./docs/events.html"
+},{
+    "id": -1,
+    "caption": "Feedback & Discuss"
+},{
+    "id": "doc_comments",
+    "title": "Comments",
+    "url": "./docs/comments.html"
 }]
