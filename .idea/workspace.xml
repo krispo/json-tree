@@ -7,35 +7,35 @@
     <file path="$PROJECT_DIR$/../dc/partials/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401540134671" ignored="false" />
     <file path="/_chart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401106534808" ignored="false" />
     <file path="$PROJECT_DIR$/../dc/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401485342372" ignored="false" />
-    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401541783938" ignored="false" />
+    <file path="/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1403769968024" ignored="false" />
     <file path="/example.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401177279673" ignored="false" />
     <file path="/json-tree.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401281306365" ignored="false" />
-    <file path="/Dummy.txt" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401513670261" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/js/app.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401527663518" ignored="false" />
+    <file path="/Dummy.txt" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402041965502" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/js/app.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402047061553" ignored="false" />
     <file path="/quickstart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401274294089" ignored="false" />
     <file path="/examples.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401283489373" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/liveedit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401527569606" ignored="false" />
-    <file path="/tryit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401289453600" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/liveedit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402004633212" ignored="false" />
+    <file path="/tryit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1403770040846" ignored="false" />
     <file path="$PROJECT_DIR$/../json-tree/Readme.md" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299236216" ignored="false" />
     <file path="/Readme.md" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299236216" ignored="false" />
     <file path="$PROJECT_DIR$/../json-tree/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401299248210" ignored="false" />
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/json-tree/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401300415369" ignored="false" />
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/json-tree/json-tree.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401300434375" ignored="false" />
-    <file path="/liveedit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401446709259" ignored="false" />
-    <file path="/attributes.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401381062796" ignored="false" />
+    <file path="/liveedit.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402004547985" ignored="false" />
+    <file path="/attributes.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402008876231" ignored="false" />
     <file path="/operations.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401380692601" ignored="false" />
     <file path="/events.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401317597936" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401530200070" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/dist/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401447744181" ignored="false" />
-    <file path="/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401444010919" ignored="false" />
-    <file path="/app.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401444300846" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/css/main.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401534095239" ignored="false" />
-    <file path="/main.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401529390938" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3/src/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401448601682" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3/dist/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401448612363" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3/dist/angular-nvd3.min.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401448612363" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/package.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401449323711" ignored="false" />
-    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401449334293" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402125637674" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/dist/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402007040741" ignored="false" />
+    <file path="/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402042015567" ignored="false" />
+    <file path="/app.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402005019613" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/css/main.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402124721591" ignored="false" />
+    <file path="/main.css" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402076873874" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3/src/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402042015567" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3/dist/angular-nvd3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402046962847" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3/dist/angular-nvd3.min.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402046962847" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/package.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402047049921" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402047041958" ignored="false" />
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/home.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401527616397" ignored="false" />
     <file path="/home.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401452439393" ignored="false" />
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/quickstart.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401527647220" ignored="false" />
@@ -44,6 +44,14 @@
     <file path="$PROJECT_DIR$/../angular-nvd3-pages/pages/feedback.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401530122556" ignored="false" />
     <file path="/feedback.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401529064016" ignored="false" />
     <file path="/doc.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401536082443" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/docs/attributes.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402008876747" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/docs/basic.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401969614972" ignored="false" />
+    <file path="$PROJECT_DIR$/../../gittest/test/index.html" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401885134620" ignored="false" />
+    <file path="$PROJECT_DIR$/../../gittest/test/token.php" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1401881126434" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3/package.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402046801640" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3/bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402046812536" ignored="false" />
+    <file path="$PROJECT_DIR$/../angular-nvd3-pages/bower_components/angular-nvd3/.bower.json" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402047034404" ignored="false" />
+    <file path="/nv.d3.js" changelist="82cf12b6-fb0d-4b67-91a6-36507ef05684" time="1402086843631" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,23 +71,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="7" selection-start="6926" selection-end="6927" vertical-scroll-proportion="0.7972973">
+            <state line="125" column="26" selection-start="3692" selection-end="3692" vertical-scroll-proportion="-13.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="events.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/events.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="21" selection-start="250" selection-end="250" vertical-scroll-proportion="-7.5">
               <folding>
-                <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doc.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="76" selection-start="270" selection-end="270" vertical-scroll-proportion="-6.875">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,17 +103,19 @@
       <file leaf-file-name="comments.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/comments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.25">
+            <state line="2" column="6" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tryit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tryit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/tryit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="12" column="104" selection-start="866" selection-end="866" vertical-scroll-proportion="0.33898306">
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,7 +132,7 @@
       <file leaf-file-name="attributes.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/attributes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-18.75">
+            <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -135,7 +153,6 @@
         <option value="$PROJECT_DIR$/lib/docco.css" />
         <option value="$PROJECT_DIR$/lib/json-tree.css" />
         <option value="$PROJECT_DIR$/docs/examples.html" />
-        <option value="$PROJECT_DIR$/docs/tryit.html" />
         <option value="$PROJECT_DIR$/bower_components/json-tree/json-tree.js" />
         <option value="$PROJECT_DIR$/docs/quickstart.html" />
         <option value="$PROJECT_DIR$/docs/events.html" />
@@ -144,6 +161,7 @@
         <option value="$PROJECT_DIR$/doc.json" />
         <option value="$PROJECT_DIR$/docs/comments.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/docs/tryit.html" />
       </list>
     </option>
   </component>
@@ -178,7 +196,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,34 +255,17 @@
               <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json-tree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json-tree-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json-tree-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.scopes" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-nvd3-pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular-nvd3" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -393,15 +393,15 @@
     <entry file="file://$PROJECT_DIR$/docs/events.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="74" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/quickstart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="89" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="89" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doc.json">
@@ -413,16 +413,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/highlight.pack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/docco.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1430" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="1430" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -435,18 +431,9 @@
         <state line="382" column="54" selection-start="20656" selection-end="20656" vertical-scroll-proportion="0.4069098" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/tryit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/json-tree/json-tree.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="18" selection-start="850" selection-end="857" vertical-scroll-proportion="1.2432432">
-          <folding />
-        </state>
+        <state line="46" column="18" selection-start="850" selection-end="857" vertical-scroll-proportion="1.2432432" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/operations.html">
@@ -458,54 +445,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="47" selection-end="47" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="76" selection-start="270" selection-end="270" vertical-scroll-proportion="0.32352942">
+        <state line="2" column="6" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/quickstart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="89" selection-start="176" selection-end="176" vertical-scroll-proportion="0.028248588">
+        <state line="4" column="89" selection-start="176" selection-end="176" vertical-scroll-proportion="0.028248588" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/attributes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="74" selection-start="897" selection-end="897" vertical-scroll-proportion="0.8305085">
-          <folding />
+        <state line="12" column="21" selection-start="250" selection-end="250" vertical-scroll-proportion="-7.5">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/attributes.html">
+    <entry file="file://$PROJECT_DIR$/doc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-18.75">
+        <state line="11" column="76" selection-start="270" selection-end="270" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="7" selection-start="6926" selection-end="6927" vertical-scroll-proportion="0.7972973">
+        <state line="125" column="26" selection-start="3692" selection-end="3692" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/tryit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="104" selection-start="866" selection-end="866" vertical-scroll-proportion="0.33898306">
           <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#sup#0;n#div#0;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#span#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
