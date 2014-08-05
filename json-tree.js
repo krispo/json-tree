@@ -3,8 +3,50 @@
     'use strict';
 
     angular.module('json-tree', [])
+        .constant('jsonTreeConfig', {
+            templateUrl: null
+        })
 
-        .directive('jsonTree', ['$compile', function($compile){
+        .directive('jsonTree', ['$compile', '$q', '$http', '$templateCache', 'jsonTreeConfig',  function($compile, $q, $http, $templateCache, jsonTreeConfig) {
+
+            var template =
+                '<span ng-bind="utils.wrap.start(node)"></span>' +
+                '<span ng-bind="node.isCollapsed ? utils.wrap.middle(node) : \'&nbsp;&nbsp;&nbsp;\'" ng-click="utils.clickNode(node)"></span>' +
+                '<ul ng-hide="node.isCollapsed">' +
+                    '<li ng-repeat="key in utils.keys(json) track by key">' +
+                        '<div draggable>' +
+                            '<span  class="key" ng-click="utils.clickNode(childs[key])" >{{ key }}: </span>' +
+                            '<span ng-hide="childs[key].isObject()">' +
+                                '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
+                                '<input ng-show="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
+                                '<textarea ng-if="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
+                                '<input ng-show="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
+                            '</span>' +
+                            '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
+                            '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +
+                            '<span class="remove" ng-dblclick="utils.removeNode(key)" ng-show="node.isHighEditLevel">-</span>' +
+                            '<span class="comma" ng-hide="utils.wrap.isLastIndex(node, $index + 1)">,</span>' +
+                        '</div>' +
+                    '</li>' +
+                '</ul>' +
+                '<span ng-bind="utils.wrap.end(node)"></span>' +
+                '<span class="add" ng-show="node.isHighEditLevel && node.isObject()" ng-click="addTpl = !addTpl; inputKey = null; inputValue = null"> + </span>' +
+                '<span ng-show="(addTpl && node.isHighEditLevel) || false">' +
+                    '<span ng-show="node.type() === \'object\'"><input type="text" ng-model="inputKey" placeholder="key"/>: <input type="text" ng-model="inputValue" placeholder="value"/></span>' +
+                    '<span ng-show="node.type() === \'array\'"><input type="text" ng-model="inputValue" placeholder="value"/></span>' +
+                    '<button ng-click="utils.addNode(inputKey, inputValue); addTpl = false">+</button><button ng-click="addTpl = false">c</button>' +
+                '</span>';
+
+            function getTemplatePromise() {
+                if(jsonTreeConfig.templateUrl) return $http.get(jsonTreeConfig.templateUrl, {
+                    cache: $templateCache
+                }).then(function (result) {
+                    return result.data;
+                });
+
+                return $q.when(template);
+            }
+
             return {
                 restrict: 'EA',
                 scope: {
@@ -292,38 +334,14 @@
 
                     /* define child scope and template */
                     var childScope = scope.$new(),
-                        template =
-                        '<span ng-bind="utils.wrap.start(node)"></span>' +
-                        '<span ng-bind="node.isCollapsed ? utils.wrap.middle(node) : \'&nbsp;&nbsp;&nbsp;\'" ng-click="utils.clickNode(node)"></span>' +
-                        '<ul ng-hide="node.isCollapsed">' +
-                            '<li ng-repeat="key in utils.keys(json) track by key">' +
-                                '<div draggable>' +
-                                    '<span  class="key" ng-click="utils.clickNode(childs[key])" >{{ key }}: </span>' +
-                                    '<span ng-hide="childs[key].isObject()">' +
-                                        '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
-                                        '<input ng-show="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
-                                        '<textarea ng-if="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
-                                        '<input ng-show="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
-                                    '</span>' +
-                                    '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
-                                    '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +
-                                    '<span class="remove" ng-dblclick="utils.removeNode(key)" ng-show="node.isHighEditLevel">-</span>' +
-                                    '<span class="comma" ng-hide="utils.wrap.isLastIndex(node, $index + 1)">,</span>' +
-                                '</div>' +
-                            '</li>' +
-                        '</ul>' +
-                        '<span ng-bind="utils.wrap.end(node)"></span>' +
-                        '<span class="add" ng-show="node.isHighEditLevel && node.isObject()" ng-click="addTpl = !addTpl; inputKey = null; inputValue = null"> + </span>' +
-                        '<span ng-show="(addTpl && node.isHighEditLevel) || false">' +
-                            '<span ng-show="node.type() === \'object\'"><input type="text" ng-model="inputKey" placeholder="key"/>: <input type="text" ng-model="inputValue" placeholder="value"/></span>' +
-                            '<span ng-show="node.type() === \'array\'"><input type="text" ng-model="inputValue" placeholder="value"/></span>' +
-                            '<button ng-click="utils.addNode(inputKey, inputValue); addTpl = false">+</button><button ng-click="addTpl = false">c</button>' +
-                        '</span>';
+                        templatePromise = getTemplatePromise()
 
                     /* define build template function */
                     scope.build = function(_scope){
                         if (scope.node.isObject()){
-                            element.html('').append($compile(template)(_scope));
+                            templatePromise.then(function(tpl) {
+                                element.html('').append($compile(tpl)(_scope));
+                            });
                         }
                     };
 
