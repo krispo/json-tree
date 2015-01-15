@@ -29,7 +29,7 @@ Add dependencies to the `<head>` section of your main html:
 <link rel="stylesheet" href="bower_components/json-tree/json-tree.css">
 ```
 
-If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.0.1.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.0.1.tar.gz)).
+If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.1.0.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.1.0.tar.gz)).
 
 ### Basic usage
 
@@ -38,7 +38,7 @@ Inject `json-tree` directive into angular module and push some data to the contr
 angular.module('myApp', ['json-tree'])
        .controller('myCtrl', function('$scope'){
            $scope.jsonData = { /* JSON data */ };
-           })
+        })
 ```
 
 and in html again you can use it like:
@@ -78,6 +78,17 @@ $scope.nodeOptions.refresh();
 Drag and sort your tree nodes via pressed `Ctrl` key.
 
 Add more style to prettify the view. See complete example in `example.html` file.
+
+### Custom template
+
+The default template can be overridden by new custom template as follows:
+```js
+angular.module('myApp', ['json-tree'])
+
+.controller('myCtrl', ['$scope', 'jsonTreeConfig', function($scope, jsonTreeConfig){
+    jsonTreeConfig.templateUrl = 'custom-template.html';
+}]);
+```
 
 ---
 For more details of technically usage, please, watch example [online](https://rawgithub.com/krispo/json-tree/master/example.html) and test it.
