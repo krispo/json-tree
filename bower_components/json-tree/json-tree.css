@@ -6,17 +6,18 @@ json-tree {
     font-family: monospace;
 }
 json-tree input[type="text"]{
-    width: 4em;
-    height: 12px;
+    width: 4.3em;
+    height: 18px;
 }
 json-tree input[type="number"]{
-    width: 4em;
-    height: 12px;
+    width: 5em;
+    height: 17px;
     vertical-align: middle;
+    font-size: 11px;
 }
 json-tree textarea {
-    width: 5em;
-    height: 12px;
+    width: 6em;
+    height: 17px;
     padding-top: 0px;
     margin-bottom: -4px;
     border-color: gray;
@@ -43,7 +44,7 @@ json-tree ul {
     margin: 0 0 0 -24px;
 }
 json-tree .key {
-    color: darkred;
+    color: #A75031; /*darkred;*/
 }
 json-tree .add {
     color: green;
@@ -64,6 +65,6 @@ json-tree .drag {
     cursor: pointer;
 }
 json-tree .empty {
-    border: 1px dashed darkred;
+    border: 1px dashed #A75031;/*darkred;*/
     background-color: #e2efff;
 }
