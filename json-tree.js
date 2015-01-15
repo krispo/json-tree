@@ -17,10 +17,10 @@
                         '<div draggable>' +
                             '<span  class="key" ng-click="utils.clickNode(childs[key])" >{{ key }}: </span>' +
                             '<span ng-hide="childs[key].isObject()">' +
-                                '<input ng-show="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
-                                '<input ng-show="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
+                                '<input ng-if="childs[key].type() === \'boolean\'" type="checkbox" ng-model="json[key]"/>' +
+                                '<input ng-if="childs[key].type() === \'number\'" type="number" ng-model="json[key]"/>' +
                                 '<textarea ng-if="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
-                                '<input ng-show="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
+                                '<input ng-if="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
                             '</span>' +
                             '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
                             '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +

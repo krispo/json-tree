@@ -29,7 +29,7 @@ Add dependencies to the `<head>` section of your main html:
 <link rel="stylesheet" href="bower_components/json-tree/json-tree.css">
 ```
 
-If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.0.1.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.0.1.tar.gz)).
+If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.1.0.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.1.0.tar.gz)).
 
 ### Basic usage
 
