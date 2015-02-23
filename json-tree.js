@@ -1,3 +1,7 @@
+/**************************************************************************
+ * JSON-tree, v0.1.1; MIT License; 23/02/2015
+ * http://krispo.github.io/json-tree
+ **************************************************************************/
 (function(){
 
     'use strict';
@@ -377,8 +381,8 @@
                     }
 
                     element.on('mousedown', function(event) {
-                        /* Check if pressed Ctrl */
-                        if (event.ctrlKey) {
+                        /* Check if pressed Ctrl or Shift */
+                        if (event.ctrlKey || event.shiftKey) {
 
                             scope.node.dragChildKey = scope.key; // tell parent scope what child element is draggable now
 
