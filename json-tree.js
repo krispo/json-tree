@@ -22,7 +22,7 @@
                                 '<textarea ng-if="childs[key].type() === \'function\'" ng-model="jsonFn[key]" ng-init="utils.textarea.init(key)" ng-change="utils.textarea.onChange(key)" ng-focus="utils.textarea.onFocus($event, key)" ng-blur="utils.textarea.onBlur(key)"></textarea>' +
                                 '<input ng-if="childs[key].type() !== \'number\' && childs[key].type() !== \'function\'" type="text" ng-model="json[key]" ng-change="utils.validateNode(key)" placeholder="null"/>' +
                             '</span>' +
-                            '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" ng-show="childs[key].isObject()"></json-tree>' +
+                            '<json-tree json="json[key]" edit-level="{{editLevel}}" collapsed-level="{{+collapsedLevel - 1}}" node="childs[key]" timeout="{{timeout}}" ng-show="childs[key].isObject()"></json-tree>' +
                             '<span class="reset" ng-dblclick="utils.resetNode(key)" ng-show="node.isHighEditLevel"> ~ </span>' +
                             '<span class="remove" ng-dblclick="utils.removeNode(key)" ng-show="node.isHighEditLevel">-</span>' +
                             '<span class="comma" ng-hide="utils.wrap.isLastIndex(node, $index + 1)">,</span>' +
@@ -54,7 +54,8 @@
                     node: '=?',
                     childs: '=?',
                     editLevel: '@',
-                    collapsedLevel: '@'
+                    collapsedLevel: '@',
+                    timeout: '@'
                 },
                 controller: function($scope){
 
@@ -352,8 +353,14 @@
                         scope.build(childScope);
                     };
 
-                    /* build template view */
-                    scope.build(childScope);
+                    // build template view
+                    if (scope.timeout && +scope.timeout>=0) {
+                        setTimeout(function(){
+                            scope.build(childScope);
+                        },scope.timeout);
+                    } else {
+                        scope.build(childScope);
+                    }
                 }
             }
         }])
