@@ -1,5 +1,5 @@
 /**************************************************************************
- * JSON-tree, v0.1.1; MIT License; 23/02/2015
+ * JSON-tree, v0.1.2; MIT License; 25/02/2015
  * http://krispo.github.io/json-tree
  **************************************************************************/
 (function(){
@@ -59,7 +59,8 @@
                     childs: '=?',
                     editLevel: '@',
                     collapsedLevel: '@',
-                    timeout: '@'
+                    timeout: '@',
+                    timeoutInit: '@'
                 },
                 controller: function($scope){
 
@@ -358,7 +359,11 @@
                     };
 
                     // build template view
-                    if (scope.timeout && +scope.timeout>=0) {
+                    if (scope.timeoutInit) {
+                        setTimeout(function(){
+                            scope.build(childScope);
+                        },scope.timeoutInit);
+                    } else if (scope.timeout && +scope.timeout>=0) {
                         setTimeout(function(){
                             scope.build(childScope);
                         },scope.timeout);
