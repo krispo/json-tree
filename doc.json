@@ -1,11 +1,11 @@
 [{
+  "id": "doc_tryit",
+  "title": "Try it",
+  "url": "./docs/tryit.html"
+},{
     "id": "doc_quickstart",
     "title": "Quick start",
     "url": "./docs/quickstart.html"
-},{
-    "id": "doc_tryit",
-    "title": "Try it",
-    "url": "./docs/tryit.html"
 },{
     "id": "doc_operations",
     "title": "Operations",

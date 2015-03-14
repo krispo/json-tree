@@ -37,3 +37,14 @@ This attribute is used to get access for some internal json-tree API.
 For example, you can completely refresh directive by using directive internal refresh function:
 <pre><code class="javascript">$scope.nodeOptions.refresh();</code></pre>
 
+<h3>timeout</h3>
+This attribute is used to set time delay on refreshing each node.
+<pre><code class="html">&lt;json-tree json="jsonData" timeout="20"&gt;&lt;/json-tree&gt;</code></pre>
+Can be used to prevent hanging the page, when json object is large.
+
+<h3>timeoutInit</h3>
+This attribute is used to set time delay only for refreshing the <b>first</b> node.
+<pre><code class="html">&lt;json-tree json="jsonData" timeoutInit="20"&gt;&lt;/json-tree&gt;</code></pre>
+Can be used to prevent hanging the page on initialization.
+
+
