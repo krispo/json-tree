@@ -1,4 +1,6 @@
-# Fully editable JSON tree
+# Editable JSON tree
+
+[![NPM Version](http://img.shields.io/npm/v/json-tree2.svg?style=flat)](https://www.npmjs.org/package/json-tree2)
 
 An AngularJS directive used for displaying and editing JSON data in a tree view. It works independently of jQuery (only internal angular's jqLite).
 Available operations with nodes:
@@ -14,7 +16,7 @@ Available operations with nodes:
 
 ### Install
 
-Install it via bower:
+##### bower
 
     $ bower install json-tree
 
@@ -30,6 +32,10 @@ Add dependencies to the `<head>` section of your main html:
 ```
 
 If you don't use bower, you can manually download and unpack json-tree ([zip](https://github.com/krispo/json-tree/archive/v0.1.1.zip), [tar.gz](https://github.com/krispo/json-tree/archive/v0.1.1.tar.gz)).
+
+##### npm
+
+    $ npm install json-tree2
 
 ### Basic usage
 
