@@ -6,20 +6,13 @@
     "license": "MIT",
     "keywords": [
         "json",
-        "json-",
         "tree",
-        "tree-",
         "json-tree",
-        "tree-json",
         "angular",
-        "angular json",
         "directive",
-        "directive json",
         "nested",
         "sortable",
-        "editable",
-        "editable tree",
-        "editable json"
+        "editable"
     ],
     "authors": [
         "Konstantin Skipor"
