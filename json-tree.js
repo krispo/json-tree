@@ -35,10 +35,16 @@
                 '</ul>' +
                 '<span ng-bind="utils.wrap.end(node)"></span>' +
                 '<span class="add" ng-show="node.isHighEditLevel && node.isObject()" ng-click="addTpl = !addTpl; inputKey = null; inputValue = null"> + </span>' +
-                '<span ng-show="(addTpl && node.isHighEditLevel) || false">' +
-                    '<span ng-show="node.type() === \'object\'"><input type="text" ng-model="inputKey" placeholder="key"/>: <input type="text" ng-model="inputValue" placeholder="value"/></span>' +
-                    '<span ng-show="node.type() === \'array\'"><input type="text" ng-model="inputValue" placeholder="value"/></span>' +
-                    '<button ng-click="utils.addNode(inputKey, inputValue); addTpl = false">+</button><button ng-click="addTpl = false">c</button>' +
+                '<span class="add-item-block" ng-show="(addTpl && node.isHighEditLevel) || false">' +
+                    '<span class="add-item-label" ng-show="node.type() === \'object\'">'+
+                        '<input class="add-item-input-key" type="text" ng-model="inputKey" placeholder="key"/>: '+
+                        '<input class="add-item-input-value" type="text" ng-model="inputValue" placeholder="value"/>'+
+                    '</span>' +
+                    '<span class="add-item-preview" ng-show="node.type() === \'array\'">'+
+                        '<input class="add-value-preview-input" type="text" ng-model="inputValue" placeholder="value"/>'+
+                    '</span>' +
+                    '<button class="add-item-btn-add" ng-click="utils.addNode(inputKey, inputValue); addTpl = false">+</button>'+
+                    '<button class="add-item-btn-cancel" ng-click="addTpl = false">c</button>' +
                 '</span>';
 
             function getTemplatePromise() {

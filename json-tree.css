@@ -17,7 +17,7 @@ json-tree input[type="number"]{
 json-tree textarea {
     width: 5em;
     height: 12px;
-    padding-top: 0px;
+    padding-top: 0;
     margin-bottom: -4px;
     border-color: gray;
     resize: none;
@@ -47,12 +47,15 @@ json-tree .key {
 }
 json-tree .add {
     color: green;
+    cursor: pointer;
 }
 json-tree .reset {
     color: steelblue;
+    cursor: pointer;
 }
 json-tree .remove {
     color: red;
+    cursor: pointer;
 }
 json-tree .comma {
     color: #c0c0c0;
@@ -66,4 +69,10 @@ json-tree .drag {
 json-tree .empty {
     border: 1px dashed darkred;
     background-color: #e2efff;
+}
+
+json-tree .add-item-block button {
+    margin-left: 3px;
+    font-size:11px;
+    cursor: pointer;
 }
