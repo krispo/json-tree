@@ -16,7 +16,7 @@
             var template =
                 '<span ng-bind="utils.wrap.start(node)"></span>' +
                 '<span ng-bind="node.isCollapsed ? utils.wrap.middle(node) : \'&nbsp;&nbsp;&nbsp;\'" ng-click="utils.clickNode(node)"></span>' +
-                '<ul ng-hide="node.isCollapsed">' +
+                '<ul ng-if="!node.isCollapsed">' +
                     '<li ng-repeat="key in utils.keys(json) track by key">' +
                         '<div draggable>' +
                             '<span  class="key" ng-click="utils.clickNode(childs[key])" >{{ key }}: </span>' +
