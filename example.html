@@ -68,7 +68,7 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="json-tree.js"></script>
 <script>
     (function(){
@@ -76,6 +76,18 @@
 
         myApp.controller('myCtrl', function($scope){
             // sample json data
+            function generate(n, f){
+                f = f || function(i){return i;};
+                var ar = [];
+                for (var i = 0; i < n; i++) {
+                    var cols = []
+                    for (var j = 0; j < n; j++) {
+                        cols.push(f(i));
+                    }
+                    ar.push(cols);
+                }
+                return ar;
+            }
             function defaultData() {
                 return {
                     key1: 'str',
