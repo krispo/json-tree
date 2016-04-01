@@ -87,7 +87,7 @@
                                     case 'array': return '[';
                                     case 'object': return '{';
                                     default: return '';
-                                };
+                                }
                             },
                             middle: function(node){
                                 if (node === undefined || node === null) return '';
@@ -95,7 +95,7 @@
                                     case 'array': return '...';
                                     case 'object': return '...';
                                     default: return '';
-                                };
+                                }
                             },
                             end: function(node){
                                 if (node === undefined || node === null) return '';
@@ -103,10 +103,10 @@
                                     case 'array': return ']';
                                     case 'object': return '}';
                                     default: return '';
-                                };
+                                }
                             },
                             isLastIndex: function(node, index){
-                                if (node === undefined || node === null) return true
+                                if (node === undefined || node === null) return true;
                                 else return index >= node.length();
                             }
                         },
@@ -119,7 +119,7 @@
                         /* add new node to the collection */
                         addNode: function(key, value){
                             var json = null;
-                            try { json = JSON.parse(value); } catch (e){}; //try get json
+                            try { json = JSON.parse(value); } catch (e){} //try get json
                             if (json === null) json = $scope.utils.tryGetFunction(value) || json; //try get function
 
                             /* add element to the object */
@@ -144,7 +144,7 @@
                                 } else {
                                     $scope.json.push(value);
                                 }
-                            };
+                            }
                             $scope.refresh();
                         },
 
@@ -157,7 +157,7 @@
                         /* remove node by key from json */
                         removeNode: function(key){
                             if ($scope.node.type() === 'object')
-                                delete $scope.json[key]
+                                delete $scope.json[key];
                             else if ($scope.node.type() === 'array')
                                 $scope.json.splice(key, 1);
                             $scope.refresh();
@@ -169,7 +169,7 @@
                             if ($scope.json[key] === null);
 
                             /* check if undefined or "" */
-                            else if ($scope.json[key] === undefined | $scope.json[key] === '') $scope.json[key] = null;
+                            else if ($scope.json[key] === undefined || $scope.json[key] === '') $scope.json[key] = null;
 
                             /* try to convert string to number */
                             else if (!isNaN(+$scope.json[key]) && isFinite($scope.json[key]))
@@ -283,7 +283,7 @@
                                 try {
                                     var func = eval( '(' + str.trim() + ')' );
                                     return func;
-                                } catch(e){};
+                                } catch(e){}
                             }
                         },
 
@@ -294,14 +294,14 @@
 
                         /* get type for variable val */
                         getType: function(val){
-                            if (val === null) return 'null'
-                            else if (val === undefined) return 'undefined'
-                            else if (val.constructor === Array) return 'array'
-                            else if (val.constructor === Object) return 'object'
-                            else if (val.constructor === String) return 'string'
-                            else if (val.constructor === Number) return 'number'
-                            else if (val.constructor === Boolean) return 'boolean'
-                            else if (val.constructor === Function) return 'function'
+                            if (val === null) return 'null';
+                            else if (val === undefined) return 'undefined';
+                            else if (val.constructor === Array) return 'array';
+                            else if (val.constructor === Object) return 'object';
+                            else if (val.constructor === String) return 'string';
+                            else if (val.constructor === Number) return 'number';
+                            else if (val.constructor === Boolean) return 'boolean';
+                            else if (val.constructor === Function) return 'function';
                             else return 'object'
                         }
                     };
@@ -346,7 +346,7 @@
 
                     /* define child scope and template */
                     var childScope = scope.$new(),
-                        templatePromise = getTemplatePromise()
+                        templatePromise = getTemplatePromise();
 
                     /* define build template function */
                     scope.build = function(_scope){
@@ -389,7 +389,7 @@
                      * This would be done under initialization */
                     scope.node.dragElements[scope.key] = function(){
                         return element;
-                    }
+                    };
 
                     element.on('mousedown', function(event) {
                         /* Check if pressed Ctrl or Shift */
@@ -438,7 +438,7 @@
                     element.on('mouseup', function(event){
                         /* tell parent scope that the current element with his children are now not draggable */
                         scope.node.dragChildKey = null;
-                    })
+                    });
 
                     function mousemoveEventHandler(event) {
                         var rect = getRectangle(scope.node.dragElements[scope.key]()[0]),
@@ -501,8 +501,8 @@
                             width = typeof el.offsetWidth === 'undefined' ? 0 : el.offsetWidth;
 
                         return { top: top, left: left, height: height, width: width, meanY: top + height / 2}
-                    };
+                    }
                 }
             }
         });
-})()
+})();
