@@ -68,7 +68,7 @@
                     timeout: '@',
                     timeoutInit: '@'
                 },
-                controller: function($scope){
+                controller: ['$scope', function($scope){
 
                     /* initialize container for child nodes */
                     $scope.childs = {};
@@ -341,7 +341,7 @@
                             $scope.refresh();
                         }
                     };
-                },
+                }],
                 link: function(scope, element, attrs){
 
                     /* define child scope and template */
@@ -380,7 +380,7 @@
             }
         }])
 
-        .directive('draggable', function($document) {
+        .directive('draggable', ['$document', function($document) {
             return {
                 link: function(scope, element, attr) {
                     var startX, startY, deltaX, deltaY, emptyElement, keys, index;
@@ -504,5 +504,5 @@
                     }
                 }
             }
-        });
+        }]);
 })();
